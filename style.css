@@ -49,6 +49,7 @@ nav ul li a:hover{
     text-align: center;
     height: 1000px;
     color: black;
+    margin-bottom:-80px;
 }
 #HOME::before{
     content: "";
@@ -63,7 +64,7 @@ nav ul li a:hover{
 
 }
 .headings{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 2rem;
     text-align: center;
     margin: 30px 0px;
@@ -79,11 +80,12 @@ nav ul li a:hover{
 }
 
 .main h1{
-    color: black;
+    color: rgb(172, 90, 90);
     font-size: 70px;
 }
 .main p{
-    color: black;
+    margin-top: 100px;
+    color: rgb(252, 248, 248);
     font-size: 30px;
 }
 
@@ -121,12 +123,12 @@ nav ul li a:hover{
 .row h2{
 font-size: 50px;
 flex-direction: column-reverse;
-color: black;
+color: rgb(0, 0, 0);
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .row h5{
     font-size: 25px;
-    color: black;
+    color: rgb(113, 46, 46);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -211,7 +213,13 @@ tr:hover{
     letter-spacing: 1px;
    }
 
-   
+   .form div{
+    background-color: white;
+    background-image: url('IMG_2687.jpg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
 
    .social-icons{
     margin-top: 70px;
@@ -222,140 +230,86 @@ tr:hover{
        margin: 10px;
        cursor: pointer;
    }
-   html {
+   /* Importing the Roboto font from Google Fonts. */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+
+/* Set font of all elements to 'Roboto' */
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+/* Remove outline of all elements on focus */
+*:focus {
+	outline: 0;
+}
+
+body {
+	background: #263238;  /* Set background color to #263238*/
+}
+
+h3 {
+	text-align: center;
+}
+
+/* Add styles to 'container' class */
+.container {
+	padding: 12px 24px 24px 24px;
+	margin: 48px 12px;
+	background: #E3F2FD;
+	border-radius: 4px;
+}
+
+/* Add styles to 'label' selector */
+label {
+	font-size: 0.85em;
+	margin-left: 12px;
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text],input[type=email], textarea {
     width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  body {
-    position: absolute;
-    background: #333;
-    box-sizing: content-box;
-    top: 50%;
-    left: 50%;
-    margin: -240px 0 0 -180px;
-  }
-  
-  h1 {
-    padding: 0 0 30px 0;
-    display: block;
-    font-family: Trebuchet MS;
-    color: white;
-    text-transform: uppercase;
-  }
-  
-  .margin {
-    margin: 0 15%;
-  }
-  
-  *:focus {
-    outline: none;
-  }
-  
-  .inputGroup {
-    position: relative;
-    margin-bottom: 30px;
-  }
-  
-  .inputGroup label {
-    position: absolute;
-    top: 0;
-    left: 5px;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    font-family: Trebuchet MS;
-    color: white;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  
-  .inputGroup input,
-  .inputGroup textarea {
-    display: block;
-    width: 280px;
-    border: none;
-    border-bottom: 1px solid #757575;
-    left: 25px;
-    padding: 5px;
-    font-family: Trebuchet MS;
-    background: none;
-    color: #ccc;
-  }
-  
-  .inputGroup input:focus ~ label,
-  .inputGroup input:valid ~ label,
-  .inputGroup textarea:focus ~ label,
-  .inputGroup textarea:valid ~ label {
-    top: -20px;
-    transition: all 0.3s ease;
-    font-size: 13px;
-  }
-  
-  .inputGroup input:focus ~ .inputBar:before,
-  .inputGroup input:focus ~ .inputBar:after,
-  .inputGroup textarea:focus ~ .inputBar:before,
-  .inputGroup textarea:focus ~ .inputBar:after {
-    width: 50%;
-  }
-  
-  .inputGroup textarea {
-    height: 100px;
-    width: 280px;
-    overflow: auto;
-    resize: none;
-  }
-  
-  .inputGroup .inputBar {
-    position: relative;
-    display: block;
-    width: 290px;
-  }
-  
-  .inputGroup .inputBar:before,
-  .inputGroup .inputBar:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    background: white;
-    height: 2px;
-    transition: all 0.2s ease;
-  }
-  
-  .inputGroup .inputBar:after {
-    right: 50%;
-  }
-  
-  .inputGroup .inputBar:before {
-    left: 50%;
-  }
-  
-  button {
-    background-color: white;
-    border: none;
-    padding: 15px 0;
-    margin: 0;
-    width: 290px;
-    color: #3c3c3c;
-    text-transform: uppercase;
-    font-family: Trebuchet MS;
-    font-size: 15px;
-    border-radius: 5px;
-    box-shadow: 0 6px #a1a1a1;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    box-shadow: 0 4px #a1a1a1;
-    top: 2px;
-  }
-  
-  button:active {
-    top: 6px;
-    box-shadow: 0 0;
-  }
-  
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* Add styles to show 'focus' of selector */
+input[type=text]:focus,input[type=email]:focus, textarea:focus {
+	border: 1px solid green;
+}
+
+/* Add styles to the submit button */
+input[type=submit] {
+	background: #64B5F6;
+	margin: 0 auto;
+	outline: 0;
+	color: white;
+	border: 0;
+	padding: 12px 24px;
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+/* Add styles for 'focus' property */
+input[type=submit]:focus {
+	background: #A5D6A7;
+	color: whitesmoke;
+}
+
+/* Style 'hover' property */
+input[type=submit]:hover {
+	background: #2196F3;
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+	text-align: center;
+}
