@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width, initial scale-1.0">
+    <title> Personal Website - Sarah </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDz_I01GCEyIoJZyCgVgAE3V1LXXXa1GY4",
+            authDomain: "sarah01-7a239.firebaseapp.com",
+            databaseURL: "https://sarah01-7a239-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "sarah01-7a239",
+            storageBucket: "sarah01-7a239.appspot.com",
+            messagingSenderId: "1054169111732",
+            appId: "1:1054169111732:web:73a6a26b4b240c5a2fcbe1"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+
+        document.getElementById("userform").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let name = document.getElementById("name-1").value;
+            let email = document.getElementById("email-1").value;
+            let message = document.getElementById("message-1").value;
+            set(ref(db, 'users/' + name), {
+                email: email,
+                message: message,
+            });
+        });
+
+
+    </script>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#education">EDUCATION </a></li>
+            <li><a href="#other">OTHER </a></li>
+
+
+        </ul>
+    </nav>
+    <section id="HOME">
+        <div class="main">
+            <h1><b>I'm Sarah Minsar...</b></h1>
+            <p><b>Undergraduate at University of Moratuwa <br>
+                    B.Sc(Hons.) in Information Technology and Management </b>
+            </p>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="headings"> ABOUT ME</h1> <br><br>
+        <div class="row">
+
+            <div id="pic">
+
+                <img src="IMG-20210612-WA0140-removebg-preview.png">
+
+            </div>
+
+            <div id="intro">
+
+                <h2>
+                    <center> <b>Hello! I'm Sarah...</b></center>
+                </h2><br>
+                <h5 style="color:aliceblue">
+                    <center><b>I'm from Kandy and I'm 21 years old. <br> I did my A/ls in physical science stream
+                            at Ajmeer national School and did my O/Ls at Balika National School,Akurana.
+                            Currently, I'm reading a degree at University of Moratuwa.</b></center> <br>
+
+                    <center><b>My father is Mr.Minsar, he is an accountant. And mother is Mrs.Zahrun.N, she is a
+                            housewife. <br>
+                            I have three siblings. An elder brother, he is abroad, an elder sister who is an
+                            Undergraduate
+                            at University of Peradeniya and a schooling younger sister.
+                        </b>
+                    </center>
+
+                </h5>
+
+            </div>
+        </div>
+    </section>
+    <section id="education">
+        <h1 class="headings">EDUCATIONAL QUALIFICATIONS</h1>
+        <div id="intro">
+            <ol>
+                <li><b>An undergraduate at University of Moratuwa,<br> B.Sc(HONS.) Information Technology and
+                        Management. (2022)</b></li><br>
+                <li><b> Advanced level, Ajmeer National School, Matale. (2020)</b></li> <br>
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>Com.Maths</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Chemistry</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>C</td>
+                    </tr>
+                </table><br>
+
+                <li><b>GCE Ordinary level, Balika National Schoool, Akurana. (2016)</b> </li> <br>
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>Maths</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Arabic</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Arabic.Lit</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Health & Physical</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Tamil</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Islam</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>B</td>
+                    </tr>
+                </table>
+            </ol>
+        </div>
+
+    </section>
+    <section id="other">
+        <h1 class="headings">OTHER QUALIFICATIONS</h1>
+        <div id="intro">
+            <Ol>
+                <li>Diploma in English at Institute of English, Kandy. </li>
+                <li>Folllowed an IT course based on Microsoft Office. </li>
+                <li>Followed a Leadership & Public Speaking course. </li>
+                <li>Communication skills in English, Sinhala and Tamil. </li>
+            </Ol>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="col-2">
+                <h3>CONTACT</h3>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sarah-minsar-7560ab253/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="form1">
+            <form class="p-3 p-xl-4" id="userform" method="post">
+                <h1 align="center" style="color:aliceblue">Contact me</h1>
+                <div class="mb-3"><input class="form-control" type="text" id="name-1" name="name"
+                        placeholder="Name"></div>
+                <div class="mb-3"><input class="form-control" type="email" id="email-1" name="email"
+                        placeholder="Email"></div>
+                <div class="mb-3"><textarea class="form-control" id="message-1" name="message" rows="6"
+                        placeholder="Message"></textarea></div>
+                <div><button class="btn btn-primary d-block w-100" type="submit">Send </button></div>
+            </form>
+        </div>
+
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>

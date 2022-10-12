@@ -1,0 +1,315 @@
+html{
+    scroll-behavior: auto;
+}
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    background-color: rgba(247, 247, 247, 0.5);
+    position: sticky;
+    top: 0;
+    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+    
+}
+
+nav ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 8px 25px;
+    transition: all .5s ease;
+
+}
+nav ul li a:hover{
+   background-color: rgb(158, 74, 65);
+   color: black;
+   box-shadow: 0 0 10px rgb(221, 163, 148);
+ 
+}
+
+/* Home Section */
+#HOME{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: center;
+    height: 1000px;
+    color: black;
+    margin-bottom:-80px;
+}
+#HOME::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(IMG_2687.jpg) no-repeat center center/cover;
+    height: 1000px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+
+}
+.headings{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 30px 0px;
+    font-style: bold;
+    float: right;
+}
+.main{
+    position: absolute;
+    top: 30%;
+    left: -40%;
+    right: 10%;
+
+}
+
+.main h1{
+    color: rgb(172, 90, 90);
+    font-size: 70px;
+}
+.main p{
+    margin-top: 100px;
+    color: rgb(252, 248, 248);
+    font-size: 30px;
+}
+
+/* about section */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 80px;
+    margin-bottom: 0px;
+    background: url("IMG_2687.jpg") no-repeat center center/cover;
+    height: 1000px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+   transform: translate(110%);
+    width: 400px;
+    height: 300px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.intro {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    right: 10%;
+}
+.row h2{
+font-size: 50px;
+flex-direction: column-reverse;
+color: rgb(0, 0, 0);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.row h5{
+    font-size: 25px;
+    color: rgb(113, 46, 46);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*education section*/
+#education{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 150px;
+    margin-bottom: 10px;
+    background: url("IMG_2687.jpg") no-repeat center center/cover;
+    height: 1000px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+    color: rgb(15, 6, 6);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+table, th, td {
+background-color: bisque;
+border: 2px solid rgb(230, 135, 84);
+width: 40%;
+align-items: center;
+color: rgb(94, 47, 37);
+}
+th {
+    color: black;;
+}
+td {
+    height: 10px;
+    vertical-align: bottom;
+    text-decoration-color: rgb(38, 14, 14);;
+  }
+
+tr:hover{
+    text-align: center;
+    background-color: rgb(241, 193, 193);
+    color: rgb(4, 4, 4);
+
+}
+/*other section*/
+#other{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 150px;
+    margin-bottom: 10px;
+    background: url("IMG_2687.jpg") no-repeat center center/cover;
+    height: 1000px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+    color: rgb(38, 14, 14);
+    font-size: 25px;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 150px;
+    margin-bottom: 10px;
+    background: url("IMG_2687.jpg") no-repeat center center/cover;
+    height: 1000px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.footer div{
+    text-align: center;
+   }
+
+   .col-2{
+     flex-grow: 2;
+   }
+   
+   .footer div h3{
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+   }
+
+   .form div{
+    background-color: white;
+    background-image: url('IMG_2687.jpg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+
+   .social-icons{
+    margin-top: 70px;
+   }
+
+   .social-icons i{   
+       font-size: 22px;
+       margin: 10px;
+       cursor: pointer;
+   }
+   /* Importing the Roboto font from Google Fonts. */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+
+/* Set font of all elements to 'Roboto' */
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+/* Remove outline of all elements on focus */
+*:focus {
+	outline: 0;
+}
+
+body {
+	background: #263238;  /* Set background color to #263238*/
+}
+
+h3 {
+	text-align: center;
+}
+
+/* Add styles to 'container' class */
+.container {
+	padding: 12px 24px 24px 24px;
+	margin: 48px 12px;
+	background: #E3F2FD;
+	border-radius: 4px;
+}
+
+/* Add styles to 'label' selector */
+label {
+	font-size: 0.85em;
+	margin-left: 12px;
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* Add styles to show 'focus' of selector */
+input[type=text]:focus,input[type=email]:focus, textarea:focus {
+	border: 1px solid green;
+}
+
+/* Add styles to the submit button */
+input[type=submit] {
+	background: #64B5F6;
+	margin: 0 auto;
+	outline: 0;
+	color: white;
+	border: 0;
+	padding: 12px 24px;
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+/* Add styles for 'focus' property */
+input[type=submit]:focus {
+	background: #A5D6A7;
+	color: whitesmoke;
+}
+
+/* Style 'hover' property */
+input[type=submit]:hover {
+	background: #2196F3;
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+	text-align: center;
+}
